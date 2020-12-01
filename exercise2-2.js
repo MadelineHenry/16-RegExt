@@ -17,7 +17,7 @@ userInput.addEventListener("keyup", (e) => {
     const pattern = /^((X|Y|Z){4} ){3}(X|Y|Z){4}$/gi;
 
     if(inputValue.match(pattern)){
-        textResult.innerHTML = "found";
+        textResult.innerHTML = "Found";
     }
     else{
         textResult.innerHTML = "Not found";
