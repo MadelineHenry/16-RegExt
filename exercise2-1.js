@@ -8,7 +8,7 @@ const  text  =  `In french the word "key" used to be written "clef", but now it 
 You might find medieval stories, such as the "clefs sanglantes de barbe bleue" and more recents ones "les clés du mystère"`
 
 const pattern = /cl(é|ef)(s)?/gi;
-const newText = text.replace(pattern, '&#128273');
+const newText = text.replace(pattern, '🔑');
 
 divText.innerHTML = newText;
 

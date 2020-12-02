@@ -1,0 +1,9 @@
+label{
+    display: inline-flex;
+    width: 160px;
+}
+#result{
+    display: inline-flex;
+    border: 1px solide grey;
+
+}
