@@ -1,25 +1,27 @@
-/*Create a function (multiple patterns) to validate a password. The password should*/
+/*Validate a credit card number. A credit card number is in the form of 4 group of 4 numbers separated by a space.*/
 
 document.querySelector("body");
 
 const userInput = document.createElement("input");
-userInput.placeholder = "Valid your password";
+userInput.placeholder = "credit card number";
 userInput.type = "text";
 document.body.appendChild(userInput);
 
-const textResult = document.createElement("div");
-document.body.appendChild(textResult);
+const validate = document.createElement("div");
+document.body.appendChild(validate);
 
-userInput.addEventListener("keyup", (e) => {
+enterPassword.addEventListener("keyup", (e) => {
     const inputValue = e.target.value;
-    
-    
-    const pattern = /^(([0-9]){4} ){3}([0-9]){4}$/i
+    const numbPattern = /(\d){1,}/;
+    const majPattern = /[a-z]{1,}/;
+    const minPattern = /[A-Z]{1,}/;
+    const specialPattern = /(+|?|$|^){1,}/;
+    const caraNumbPattern = /^\S){8,18}/;
 
-    if(inputValue.match(pattern)){
-        textResult.innerHTML = "Your password is correct!";
-    }
+    if ((inputValue.match(numbPattern)) && (inputValue.match(majPattern)) && (inputValue.match(minPattern)) && (inputValue.match(specialPattern)) && (inputValue.match(caraNumbPattern)){
+        validate.innerHTML = "Your password is accepted!";
+        }
     else{
-        textResult.innerHTML = "Your password is not correct! Try an other one!";
-    }
+        validate.innerHTML = "Your password is not accepted! Try an other one!";
+        }
 })
