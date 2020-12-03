@@ -1,0 +1,58 @@
+main{
+    font-family: "Open Sans";
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-size: 35px;
+    color: rgb(102, 102, 102);
+    margin-top: 5px;
+    margin-bottom: 60px;
+    
+}
+
+h3{
+    font-family: "Open Sans light";
+    font-size: 41px;
+    color: rgb(54, 54, 54);
+    margin-top: 5px;
+    margin-bottom: 60px;
+    margin-left: 140px;
+}
+
+.firstName, .email, .password{
+    font-size: 20px;
+    color: rgb(102, 102, 102);
+}
+
+#inputName, #inputEmail, #inputPassword{
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    color: rgb(102, 102, 102);
+
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.flexcontainer{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.progess{
+    display: flex;
+    flex-direction: column;
+}

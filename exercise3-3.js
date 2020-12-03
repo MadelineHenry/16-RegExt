@@ -3,22 +3,22 @@
 document.querySelector("body");
 
 const userInput = document.createElement("input");
-userInput.placeholder = "credit card number";
+userInput.placeholder = "Insert your password";
 userInput.type = "text";
 document.body.appendChild(userInput);
 
 const validate = document.createElement("div");
 document.body.appendChild(validate);
 
-enterPassword.addEventListener("keyup", (e) => {
+userInput.addEventListener("keyup", (e) => {
     const inputValue = e.target.value;
     const numbPattern = /(\d){1,}/;
     const majPattern = /[a-z]{1,}/;
     const minPattern = /[A-Z]{1,}/;
-    const specialPattern = /(+|?|$|^){1,}/;
-    const caraNumbPattern = /^\S){8,18}/;
+    const specialPattern = /([\+\?\$\^\&]){1,}/;
+    const caraNumbPattern = /(?=.{8,18})/;
 
-    if ((inputValue.match(numbPattern)) && (inputValue.match(majPattern)) && (inputValue.match(minPattern)) && (inputValue.match(specialPattern)) && (inputValue.match(caraNumbPattern)){
+    if ((inputValue.match(numbPattern)) && (inputValue.match(majPattern)) && (inputValue.match(minPattern)) && (inputValue.match(specialPattern)) && (inputValue.match(caraNumbPattern))){
         validate.innerHTML = "Your password is accepted!";
         }
     else{
